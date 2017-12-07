@@ -1,0 +1,13 @@
+#!/bin/sh
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
+if [ -f "/usr/bin/g++" ]; then
+  echo "Check gcc status : true"
+  cp ./src/Makefile ./Makefile
+  echo "Execute the command 'make' to install"
+else
+  echo "Check gcc status : false ! "
+  echo "Please install g++ compiler "
+fi
